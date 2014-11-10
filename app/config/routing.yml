@@ -1,0 +1,4 @@
+hugo_tuto:
+    resource: "@hugoTutoBundle/Resources/config/routing.yml"
+    prefix:   /tuto/
+

@@ -1,0 +1,18 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: adsonwallf_demo
+    database_user: adsonwallf_bdd
+    database_password: g2BAWALL
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt
+    debug_toolbar: true
+    debug_redirects: false
+    # debug_redirects: true
+    use_assetic_controller: true

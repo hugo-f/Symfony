@@ -1,0 +1,4 @@
+services:
+#    hugo_user.example:
+#        class: hugo\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

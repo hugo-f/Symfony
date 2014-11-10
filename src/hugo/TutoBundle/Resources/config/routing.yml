@@ -1,0 +1,57 @@
+byebye:
+    path:    /byebye
+    defaults: { _controller:hugoTutoBundle:Advert:byebye}
+
+    # ################################################################################# #
+
+hugo_tuto_home:
+    path:	/{page}
+    defaults: { _controller:hugoTutoBundle:Advert:index, page: 1 }
+    requirements:
+        page: \d*
+    
+hugo_tuto_view:
+    path:      /advert/{id}
+    defaults:  { _controller: hugoTutoBundle:Advert:view }
+    requirements:
+        id: \d+
+    
+hugo_tuto_add:
+    path:      /add
+    defaults:  { _controller: hugoTutoBundle:Advert:add }
+
+hugo_tuto_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: hugoTutoBundle:Advert:edit }
+    requirements: 
+        id: \d+
+
+hugo_tuto_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: hugoTutoBundle:Advert:delete }
+    requirements:
+        id: \d+
+
+hugo_tuto_view_slug:
+    path:		/{year}/{slug}.{format}
+    defaults: { _controller: hugoTutoBundle:Advert:viewSlug, format: html }
+    requirements:
+        year: \d{4}
+
+hugo_tuto_test_redirect:
+    path:		/hugo_tuto_test_redirect
+    defaults:		{ _controller: hugoTutoBundle:Advert:testRedir }
+
+hugo_tuto_test_session:
+    path:		/hugo_tuto_test_session
+    defaults:		{ _controller: hugoTutoBundle:Advert:testSession, id: 444 }
+
+login:
+    pattern:   /login
+    defaults:  { _controller: hugoUserBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout

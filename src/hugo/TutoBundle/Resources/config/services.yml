@@ -1,0 +1,14 @@
+# services:
+#    hugo_tuto.example:
+#        class: hugo\TutoBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%] parameter se trouve dans app/congig/parameters.yml !!!
+
+
+services:
+    hugo_tuto.antispam:
+        class: hugo\TutoBundle\Antispam\HugoAntispam
+        arguments: [@mailer, 50]
+        calls:
+            - [ setLocale, [ %locale% ] ]
+        tags:
+            - { name: twig.extension }

@@ -1,0 +1,24 @@
+{% extends "hugoTutoBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block hugotuto_body %}
+
+  <h2>Liste des annonces</h2>
+
+  <ul>
+    {% for advert in listAdverts %}
+      <li>
+        <a href="{{ path('hugo_tuto_view', {'id': advert.id}) }}">
+          {{ advert.title }}
+        </a>
+        par {{ advert.author }}   
+      </li>
+    {% else %}
+      <li>Pas (encore !) d'annonces</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
